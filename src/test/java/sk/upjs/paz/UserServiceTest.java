@@ -18,7 +18,7 @@ class UserServiceTest {
                 new User(null,"Ivan", "Krajný", User.Gender.MALE, LocalDate.of(2000,10,30),User.Role.Student)
         ));
 
-        GenderRatio gr = userService.calculateGenderRAtio();
+        GenderRatio gr = userService.calculateGenderRatio();
         assertEquals((double) 2/3, gr.girls());
         assertEquals((double) 1/3, gr.boys());
         assertEquals(0.0,gr.unknown());
@@ -28,7 +28,7 @@ class UserServiceTest {
     @Test
     void calculateGenderRatio_empty(){
         userService = new UserService(Collections.emptyList());
-        GenderRatio gr = userService.calculateGenderRAtio();
+        GenderRatio gr = userService.calculateGenderRatio();
         assertEquals(0.0, gr.girls());
         assertEquals(0.0, gr.boys());
         assertEquals(0.0, gr.other());
@@ -37,7 +37,7 @@ class UserServiceTest {
     @Test
     void calculateGenderRatio_null(){
         userService = new UserService(null);
-        GenderRatio gr = userService.calculateGenderRAtio();
+        GenderRatio gr = userService.calculateGenderRatio();
         assertEquals(0.0, gr.girls());
         assertEquals(0.0, gr.boys());
         assertEquals(0.0, gr.other());

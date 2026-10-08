@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sk.upjs.paz.MainController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="650"
+      prefHeight="520"
+      style="-fx-background-color: #F2F5FB; -fx-padding: 35;">
+
+  <VBox alignment="CENTER" spacing="8">
+    <Label text="Prezenčka"
+           style="-fx-font-size: 32px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #172B4D;"/>
+
+    <Label text="Štatistiky študentov na jednom mieste"
+           style="-fx-font-size: 14px;
+                      -fx-text-fill: #718096;"/>
+  </VBox>
+
+  <VBox alignment="CENTER"
+        spacing="22"
+        maxWidth="500"
+        style="-fx-background-color: white;
+                 -fx-background-radius: 18;
+                 -fx-padding: 40;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 18, 0, 0, 5);">
+
+    <Label text="VÝSLEDOK VÝPOČTU"
+           style="-fx-font-size: 12px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #64748B;"/>
+
+
+    <Label fx:id="resultLabel"
+           text="Zatiaľ nevypočítané"
+           prefHeight="110"
+           minHeight="110"
+           maxWidth="520"
+           alignment="CENTER"
+           textAlignment="CENTER"
+           wrapText="true"
+           style="-fx-font-size: 16px;
+              -fx-font-weight: bold;
+              -fx-text-fill: #1E293B;"/>
+
+
+    <Button text="Vypočítaj"
+            onAction="#generateRandom"
+            style="-fx-background-color: #2563EB;
+                       -fx-text-fill: white;
+                       -fx-font-size: 15px;
+                       -fx-font-weight: bold;
+                       -fx-background-radius: 10;
+                       -fx-padding: 12 35;
+                       -fx-cursor: hand;"/>
+  </VBox>
+
+  <Label text="PAZ1c - 3. cvičenie"
+         style="-fx-font-size: 11px;
+                  -fx-text-fill: #94A3B8;"/>
+
+</VBox>

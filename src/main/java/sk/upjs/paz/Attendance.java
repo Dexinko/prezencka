@@ -1,3 +1,4 @@
+
 package sk.upjs.paz;
 
 import java.time.LocalDate;

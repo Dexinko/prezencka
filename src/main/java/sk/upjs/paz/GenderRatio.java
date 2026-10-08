@@ -6,4 +6,6 @@ public record GenderRatio(
         double unknown,
         double other
 ) {
+    public static class MainApp {
+    }
 }
